@@ -37,31 +37,33 @@ struct Random_number_View: View {
                     .textContentType(.telephoneNumber).font(.title)
                     .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
                     .multilineTextAlignment(.center)
-                
+                    .keyboardType(.numberPad)
                 Spacer()
                 Toggle(isOn: $minimum_number_is_equal) {
                     
                     if minimum_number_is_equal {
-                        Text("equal").foregroundColor(.green)
-                    }else{  Text("equal").foregroundColor(.black)
+                        Text("include").foregroundColor(.green)
+                    }else{  Text("include").foregroundColor(.black)
                     }
                    
                 }
 
-            }.padding(.horizontal, 40)
+            }.padding(.horizontal, 10)
             
             HStack() {
                 Text("Max number:")
-                TextField("5 ", text: $maximum_number)  .textContentType(.telephoneNumber).font(.title).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                TextField("5 ", text: $maximum_number)
+                    .font(.title).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
+                    .keyboardType(.numberPad)
                 Spacer()
                 Toggle(isOn: $maximum_number_is_equal) {
                     if maximum_number_is_equal {
-                        Text("equal").foregroundColor(.green)
-                    }else{  Text("equal").foregroundColor(.black)
+                        Text("include").foregroundColor(.green)
+                    }else{  Text("include").foregroundColor(.black)
                     }
                 }
-            }.padding(.horizontal,40)
+            }.padding(.horizontal,10)
           
            
            
@@ -78,7 +80,13 @@ struct Random_number_View: View {
           
                 
             } label: {
-                Text("Get Number").padding(.top,10).foregroundColor(.red)
+                Text("Get Number")
+                    .padding(5)
+                    .foregroundColor(.red).border(.black, width: 1)
+                    .background(.white)
+                    .cornerRadius(3)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    
             }
             .padding(.bottom,20)
             

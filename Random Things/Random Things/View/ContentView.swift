@@ -9,33 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack{
+        NavigationView{
             VStack{
-              
+                
                 HStack{
-
-                            NavigationLink(destination: Random_number_View()) {
-                                VStack{
-                                Image("random_number").resizable().frame(width: 100, height: 100)          .aspectRatio(contentMode: .fit)
-                                    Text("number").foregroundColor(Color.black)
-                                }   .padding(10)
-                                    .border(Color.black, width: 0.6)
-                                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
-                            }
-                           
-                      
-                    Spacer().frame(width: 30)
-                    
                     
                     NavigationLink(destination: Random_number_View()) {
                         VStack{
-                            Image("dice").resizable().frame(width: 100, height: 100)
-                                .aspectRatio(contentMode: .fit)
-                            Text("dice").foregroundColor(Color.black)
-                        }       .padding(10)
-                                .border(Color.black, width: 0.6)
-                                .cornerRadius(3.0)
+                            Image("random_number").resizable().frame(width: 100, height: 100)
+                            .aspectRatio(contentMode: .fit)
+                            Text("number").foregroundColor(Color.black)
+                        }   .padding(10)
+                            .border(Color.red, width: 0.6)
+                            .cornerRadius(
+                                5.0)
+                        
+                    }
                     
+                    
+                    Spacer().frame(width: 30)
+                    
+                    
+                    NavigationLink(destination: Dice_View()) {
+                        VStack{
+                            Image("dice").resizable().frame(width: 100, height: 100)
+                              
+                            Text("dice").foregroundColor(Color.black).aspectRatio(contentMode: .fit)
+                        }       .padding(10)
+                            .border(Color.black, width: 0.6)
+                            .cornerRadius(3.0)
+                        
                     }
                 }
                 
@@ -60,7 +63,7 @@ struct ContentView: View {
                             
                         }   .padding(10)
                             .border(Color.black, width: 0.6)
-                            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(3.0)
                     }
                     
                 }
@@ -74,22 +77,22 @@ struct ContentView: View {
                             
                         }   .padding(10)
                             .border(Color.black, width: 0.6)
-                            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(3.0)
                     }
                     Spacer().frame(width: 30)
                     NavigationLink(destination: Random_number_View()) {
-                    VStack{
+                        VStack{
                             Image("list2").resizable().frame(width: 100, height: 100)  .aspectRatio(contentMode: .fit)
                             Text("cast lots").foregroundColor(Color.black)
                             
                         }   .padding(10)
                             .border(Color.black, width: 0.6)
-                            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(3.0)
                     }
                     
                 }
             }.navigationTitle("Random Things")
-        }
+        }.padding(.top,10)
         }
     }
 
