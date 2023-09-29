@@ -2,7 +2,7 @@
 //  Random_ThingsApp.swift
 //  Random Things
 //
-//  Created by Yunus Gündüz on 27.09.2023.
+//  Created by Yunus Gündüz on 22.09.2023.
 //
 
 import SwiftUI

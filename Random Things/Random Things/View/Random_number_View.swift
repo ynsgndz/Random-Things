@@ -18,7 +18,7 @@ struct Random_number_View: View {
     @State  var maximum_number = "100"
     @State private var minimum_number_is_equal = false
     @State private var maximum_number_is_equal = false
-     var random_number_vm = Random_number_ViewModel()
+    var random_number_vm = Random_number_ViewModel()
    
     let formatter = DateFormatter()
     var body: some View {
